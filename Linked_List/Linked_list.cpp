@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-class Node
-{
+//Creating a Node structure
+class Node{
 public:
     int data;
     Node *next;
@@ -12,7 +12,7 @@ public:
         next = nullptr;
     }
 };
-
+//Creating a list and some functions
 class list
 {
 private:
@@ -25,6 +25,7 @@ public:
         head = nullptr;
         tail = nullptr;
     }
+//Push_front function
     void Push_front(int val)
     {
         Node *newNode = new Node(val);
@@ -39,6 +40,7 @@ public:
             head = newNode;
         }
     }
+//push_back function
     void Push_back(int val){
         Node *newNode = new Node(val);
         if(head==nullptr){
@@ -50,6 +52,7 @@ public:
             tail=newNode;
         }
     }
+//Pop_front Function
     void Pop_front()
     {
         if(head==nullptr){
@@ -60,7 +63,7 @@ public:
             head=head->next;
         }
     }
-    
+    //Linked List print function
     void print()
     {
         Node *temp = head;
@@ -84,3 +87,4 @@ int main()
     ll.print();
     return 0;
 }
+
