@@ -63,6 +63,27 @@ public:
             head=head->next;
         }
     }
+//Pop_back function
+    void Pop_back(){
+       Node *temp=head;
+       if(head==nullptr){
+        cout<<"List is empty"<<endl;
+        return;
+       }
+       else if(head->next==nullptr){
+        cout<<head->data<<" is removed from the back"<<endl;
+        head=nullptr;
+        tail=nullptr;
+       }
+       else{
+        while(temp->next!=tail){
+            temp=temp->next;
+        }
+        cout<<tail->data<<" is removed from the back"<<endl;
+        tail=temp;
+        tail->next=nullptr;
+       }
+    }
     //Linked List print function
     void print()
     {
